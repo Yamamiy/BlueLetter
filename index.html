@@ -163,7 +163,7 @@
   .then(async response => {
     const text = await response.text();
     if (response.ok) {
-      alert("送信完了！未来で会おう🌸\nレスポンス: " + text);
+      alert("送信完了！未来で会おう\nレスポンス: " + text);
     } else {
       alert("送信失敗！\nステータス: " + response.status + "\nレスポンス: " + text);
     }
