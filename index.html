@@ -156,9 +156,10 @@
 
   fetch("https://script.google.com/macros/s/AKfycbxNKxjpou3yMwRXlhgklv8sSBRq-jgvfo_WPRXf68-zKhnYwmOovp2EfBkbW1Pk0gvToA/exec", {
     method: "POST",
-    body: formData
-  })
-    .then(async response => {
+    headers: { "Content-Type": "application/x-www-form-urlencoded" }, // ★これ重要！
+    body: new URLSearchParams(data) // JSON.stringify ではなく URL形式にする！
+  }) 
+.then(async response => {
       const text = await response.text();
       if (response.ok) {
         alert("送信完了！未来で会おう\nレスポンス: " + text);
