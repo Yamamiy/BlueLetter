@@ -155,9 +155,11 @@
     request: document.getElementById("request").value
   };
 
-  fetch("https://script.google.com/macros/s/AKfycbxydfDuXghIovrc_RaWPlKs6yvW5gk1LxQ8LTNwZyrtv_6j9XldgAJX6-NbZhwcnIC-eg/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbx_n5qJELlzGQPWiy0R-8_NXuV8pXpxMPVrbCwu7lxkW8XJaUqVrhayyz1blA_Xr_56Lw/exec", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { 
+      "Content-Type": "application/json"
+    },
     body: JSON.stringify(data)
   })
   .then(async response => {
