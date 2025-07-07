@@ -155,11 +155,11 @@
     request: document.getElementById("request").value
   };
 
-  fetch("https://script.google.com/macros/s/AKfycbzdwBcF6ZoC7oqrB7fe9v0XDOmeVPPXGLFMa282-bVPPO-NaoR2KB0WJT11UlRVw9WWkA/exec", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(data)
-})
+  fetch("https://script.google.com/macros/s/AKfycbyO9VcvdSBaqMR9yK3V5eJM7uk8Z0rxN4ng6BU5A49mnGg_1uIAUMjnnQw9ibNNybbD9Q/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  })
   .then(async response => {
     const text = await response.text();
     if (response.ok) {
