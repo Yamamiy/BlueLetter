@@ -111,7 +111,7 @@
 
 
 
-  <h1>Dearfutureversion5</h1>
+  <h1>Dearfutureversion6</h1>
   <form id="letter-form">
     <label>
       名前（フルネーム）:
@@ -157,7 +157,7 @@
   fetch("https://script.google.com/macros/s/AKfycbzhZtPbopmvvfJuRevHVU2GUOSPky76PRYHVtuSTd3Cutz8qGoTvNF9uL6x_5xM06taag/exec", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" }, // ★これ重要！
-    body: new URLSearchParams(data) // JSON.stringify ではなく URL形式にする！
+    body: new URLSearchParams(formData) // JSON.stringify ではなく URL形式にする！
   }) 
 .then(async response => {
       const text = await response.text();
