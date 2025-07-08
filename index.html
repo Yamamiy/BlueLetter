@@ -154,7 +154,7 @@
   formData.append("favoriteColor", document.getElementById("favoriteColor").value);
   formData.append("request", document.getElementById("request").value);
 
-  fetch("https://script.google.com/macros/s/AKfycbzhZtPbopmvvfJuRevHVU2GUOSPky76PRYHVtuSTd3Cutz8qGoTvNF9uL6x_5xM06taag/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxpbFJJ4uyNIbTAP7p0hW9pO50TfDiov4ZhpRhte5eYtlf-09T6BTbLw7T8Vfy4oUDD1w/exec", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" }, // ★これ重要！
     body: new URLSearchParams(formData) // JSON.stringify ではなく URL形式にする！
